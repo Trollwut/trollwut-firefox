@@ -1,0 +1,68 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* to hide the native tabs */
+#main-window:not([customizing]):not([tabsintitlebar="true"]) #TabsToolbar {
+  visibility: collapse;
+}
+#navigator-toolbox {
+  margin-top: 1px;
+}
+
+/* to hide the sidebar header */
+#sidebar-header {
+  visibility: collapse !important;
+  /*display: none !important;*/
+}
+
+/* alignment of right-click menu to not be directly under cursor */
+#contentAreaContextMenu {
+  margin: 5px 0 0 5px;
+}
+
+/* Change the font of the URL bar, better indication of fake addresses and shit */
+#urlbar, #searchbar .searchbar-textbox {
+  font-family: Iosevka !important;
+}
+
+/* No white flash on opening a new tab */
+.browserContainer {
+  background-color: #282a36 !important;
+}
+
+/* tabs to bottom */
+#browser-panel { /* Deprecated since FF 59 */
+  -moz-box-direction: reverse;
+  padding: 0 !important;
+}
+
+#navigator-toolbox {
+  -moz-box-ordinal-group: 2;
+}
+
+#main-window[sizemode="maximized"] {
+  padding-top: 7px !important;
+}
+
+/* hide tab toolbar when fullscreen */
+/* #nav-bar[inFullscreen],
+#TabsToolbar[inFullscreen] {
+display: none;
+} */
+
+/* hide titlebar */
+#titlebar {
+  display: none !important;
+}
+
+/* put suggestions popup on top */
+#PopupAutoCompleteRichResult {
+  opacity: 0.9;
+  margin-top: -332px;
+  margin-left: 10px;
+  height: 300px;
+}
+
+#PopupAutoCompleteRichResult .autocomplete-richlistbox > scrollbox {
+  overflow-y: auto !important;
+}
+

@@ -1,0 +1,55 @@
+/* Hide the top menu (New Tab/Search) */
+/*#topmenu {
+  display: none;
+}*/
+
+#newtab-label {
+  display: none;
+}
+
+#topmenu {
+  order: 2;
+}
+
+/* Change styling of unread tabs */
+.tab[notselectedsinceload="true"] {
+  font-style: italic;
+}
+
+body.dark-theme {
+  background-color: #282a36;
+  color: #f8f8f2;
+  overflow:hidden!important;
+  --searchbox-background:#2b3034
+}
+
+ul.contextmenu {
+  background-color: #282a36;
+  color: #f8f8f2;
+  border: 1px #282a36 solid;
+}
+
+.contextmenu > li:hover {
+  background-color: #ff79c6;
+  color: white;
+}
+
+.contextmenu > hr {
+  background-color: #44475a;
+}
+
+body {
+  font-size: 14px;
+  /*font-family: "InputSansCondensed Nerd Font";*/
+  /*font-family: "TeX Gyre Heros";*/
+  font-family: "Liberation Sans";
+}
+
+/* hide some context menu shit */
+.contextmenu li:nth-child(08), /* Reload All Tabs */
+.contextmenu li:nth-child(09), /* Close Tabs Underneath */
+.contextmenu li:nth-child(10) /* Close Other Tabs */
+{
+  display: none;
+}
+
